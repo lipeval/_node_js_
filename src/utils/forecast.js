@@ -12,7 +12,8 @@ const getWeather = (lat, long, cb) => {
             cb(`Error: ${body.error.info}`)
         } else {
             const data = body.current;
-            cb(null, `${data.weather_descriptions[0]}. It is currently ${data.temperature} degrees and it feels like ${data.feelslike} degrees`)
+            console.log(data)
+            cb(null, `${data.weather_descriptions[0]}. It is currently ${data.temperature} degrees and it feels like ${data.feelslike} degrees, Observation time: ${data.observation_time}`)
 
         }
 
